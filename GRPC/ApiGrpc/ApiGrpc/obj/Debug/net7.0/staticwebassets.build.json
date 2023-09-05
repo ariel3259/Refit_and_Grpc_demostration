@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "P4uMHsmdc2RmKifi2XAONvAuFl9uGdcadzFQXm8ex7s=",
+  "Source": "ApiGrpc",
+  "BasePath": "_content/ApiGrpc",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

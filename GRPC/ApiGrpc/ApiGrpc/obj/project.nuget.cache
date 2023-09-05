@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "dgSpecHash": "iAFJ3zQwqGeQR3fupmt24uvbC74oU6oaUllaqDlKZBuE9NA4El1l6YSyqTATlZQOxoKg0l4Yq/1ruEH181Ob9Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Ryzen3\\Desktop\\APIS\\GRPC\\ApiGrpc\\ApiGrpc\\ApiGrpc.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Ryzen3\\.nuget\\packages\\google.protobuf\\3.23.1\\google.protobuf.3.23.1.nupkg.sha512",
+    "C:\\Users\\Ryzen3\\.nuget\\packages\\grpc.aspnetcore\\2.56.0\\grpc.aspnetcore.2.56.0.nupkg.sha512",
+    "C:\\Users\\Ryzen3\\.nuget\\packages\\grpc.aspnetcore.server\\2.56.0\\grpc.aspnetcore.server.2.56.0.nupkg.sha512",
+    "C:\\Users\\Ryzen3\\.nuget\\packages\\grpc.aspnetcore.server.clientfactory\\2.56.0\\grpc.aspnetcore.server.clientfactory.2.56.0.nupkg.sha512",
+    "C:\\Users\\Ryzen3\\.nuget\\packages\\grpc.core.api\\2.56.0\\grpc.core.api.2.56.0.nupkg.sha512",
+    "C:\\Users\\Ryzen3\\.nuget\\packages\\grpc.net.client\\2.56.0\\grpc.net.client.2.56.0.nupkg.sha512",
+    "C:\\Users\\Ryzen3\\.nuget\\packages\\grpc.net.clientfactory\\2.56.0\\grpc.net.clientfactory.2.56.0.nupkg.sha512",
+    "C:\\Users\\Ryzen3\\.nuget\\packages\\grpc.net.common\\2.56.0\\grpc.net.common.2.56.0.nupkg.sha512",
+    "C:\\Users\\Ryzen3\\.nuget\\packages\\grpc.tools\\2.56.0\\grpc.tools.2.56.0.nupkg.sha512",
+    "C:\\Users\\Ryzen3\\.nuget\\packages\\microsoft.extensions.configuration\\3.0.3\\microsoft.extensions.configuration.3.0.3.nupkg.sha512",
+    "C:\\Users\\Ryzen3\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.0.3\\microsoft.extensions.configuration.abstractions.3.0.3.nupkg.sha512",
+    "C:\\Users\\Ryzen3\\.nuget\\packages\\microsoft.extensions.configuration.binder\\3.0.3\\microsoft.extensions.configuration.binder.3.0.3.nupkg.sha512",
+    "C:\\Users\\Ryzen3\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\3.0.3\\microsoft.extensions.dependencyinjection.3.0.3.nupkg.sha512",
+    "C:\\Users\\Ryzen3\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.0.3\\microsoft.extensions.dependencyinjection.abstractions.3.0.3.nupkg.sha512",
+    "C:\\Users\\Ryzen3\\.nuget\\packages\\microsoft.extensions.http\\3.0.3\\microsoft.extensions.http.3.0.3.nupkg.sha512",
+    "C:\\Users\\Ryzen3\\.nuget\\packages\\microsoft.extensions.logging\\3.0.3\\microsoft.extensions.logging.3.0.3.nupkg.sha512",
+    "C:\\Users\\Ryzen3\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\3.0.3\\microsoft.extensions.logging.abstractions.3.0.3.nupkg.sha512",
+    "C:\\Users\\Ryzen3\\.nuget\\packages\\microsoft.extensions.options\\3.0.3\\microsoft.extensions.options.3.0.3.nupkg.sha512",
+    "C:\\Users\\Ryzen3\\.nuget\\packages\\microsoft.extensions.primitives\\3.0.3\\microsoft.extensions.primitives.3.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

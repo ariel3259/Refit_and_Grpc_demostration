@@ -1,0 +1,46 @@
+﻿syntax = "proto3";
+
+option  csharp_namespace = "GrpcProduct";
+
+service ProductService {
+	rpc GetAll(PaginationArgs) returns (PaginationResponse) {}
+	rpc GetOne(ProductPk) returns (ProductsResponse) {}
+	rpc Save(ProductRequest) returns (ProductsResponse) {}
+	rpc Update(ProductUpdate) returns (ProductsResponse) {}
+	rpc Delete(ProductPk) returns (Void) {}
+}
+
+message PaginationArgs {
+	optional int32 offset = 1;
+	optional int32 limit = 2;
+}
+
+message ProductsResponse {
+	string id = 1;
+	string name = 2;
+	double price = 3;
+	int32 stock = 4;
+}
+
+
+message ProductRequest {
+	string name = 1;
+	double price = 2;
+	int32 stock = 3;
+}
+
+message ProductUpdate {
+	string id = 1;
+	ProductRequest req = 2;
+}
+
+message ProductPk {
+	string id = 1;
+}
+
+message Void {}
+
+message PaginationResponse {
+	repeated ProductsResponse products = 1;
+	int32 totalItems = 2;
+}

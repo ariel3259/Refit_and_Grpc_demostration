@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "vZ77Kpk7R7Sg50kAJ08E/rYUSwR/4khumoNpI+KseEQ=",
+  "Source": "ApiConsumerGrpc",
+  "BasePath": "_content/ApiConsumerGrpc",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
