@@ -32,3 +32,4 @@ C:\Users\Ryzen3\Desktop\APIS\GRPC\ApiGrpc\ApiGrpc\obj\Debug\net7.0\refint\ApiGrp
 C:\Users\Ryzen3\Desktop\APIS\GRPC\ApiGrpc\ApiGrpc\obj\Debug\net7.0\ApiGrpc.pdb
 C:\Users\Ryzen3\Desktop\APIS\GRPC\ApiGrpc\ApiGrpc\obj\Debug\net7.0\ApiGrpc.genruntimeconfig.cache
 C:\Users\Ryzen3\Desktop\APIS\GRPC\ApiGrpc\ApiGrpc\obj\Debug\net7.0\ref\ApiGrpc.dll
+C:\Users\Ryzen3\Desktop\APIS\GRPC\ApiGrpc\ApiGrpc\bin\Debug\net7.0\FluentValidation.dll

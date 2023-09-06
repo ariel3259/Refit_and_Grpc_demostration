@@ -3,10 +3,10 @@
 option  csharp_namespace = "GrpcProduct";
 
 service ProductService {
-	rpc GetAll(PaginationArgs) returns (PaginationResponse) {}
+	rpc GetAll(PaginationArgs) returns (PaginationProducts) {}
 	rpc GetOne(ProductPk) returns (ProductsResponse) {}
-	rpc Save(ProductRequest) returns (ProductsResponse) {}
-	rpc Update(ProductUpdate) returns (ProductsResponse) {}
+	rpc Save(ProductRequest) returns (ProductsHandler) {}
+	rpc Update(ProductUpdate) returns (ProductsHandler) {}
 	rpc Delete(ProductPk) returns (Void) {}
 }
 
@@ -31,7 +31,7 @@ message ProductRequest {
 
 message ProductUpdate {
 	string id = 1;
-	ProductRequest req = 2;
+	ProductRequest product = 2;
 }
 
 message ProductPk {
@@ -40,7 +40,13 @@ message ProductPk {
 
 message Void {}
 
-message PaginationResponse {
+message PaginationProducts {
 	repeated ProductsResponse products = 1;
-	int32 totalItems = 2;
+	int32 total_items = 2;
+}
+
+message ProductsHandler {
+	optional ProductsResponse product = 1;
+	bool is_error = 2;
+	repeated string errors = 3;
 }

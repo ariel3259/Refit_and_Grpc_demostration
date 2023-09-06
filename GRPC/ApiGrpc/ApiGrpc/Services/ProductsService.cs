@@ -11,11 +11,11 @@ namespace ApiGrpc.Services
             products = new List<Product>();
         }
 
-        public PaginationResponse GetAll(PaginationArgs args)
+        public PaginationProducts GetAll(PaginationArgs args)
         {
             List<Product> productsActive = this.products.Where(x => x.Status).OrderBy(x => x.Id).Skip(args.Offset).Take(args.Limit == 0 ? 10 : args.Limit).ToList();
             int totalItems = products.Where(x => x.Status).OrderBy(x => x.Id).Skip(args.Offset).Take(args.Limit == 0 ? 10 : args.Limit).Count();
-            PaginationResponse pageResponse = new PaginationResponse()
+            PaginationProducts pageResponse = new PaginationProducts()
             {
                 TotalItems = totalItems,
             };
@@ -48,14 +48,14 @@ namespace ApiGrpc.Services
             products.Add(product);
         }
 
-        public ProductsResponse Update(ProductUpdate productUpdate)
+        public ProductsResponse? Update(ProductUpdate productUpdate)
         {
             Product? productToModify = this.products.FirstOrDefault(x => x.Status && x.Id.ToString() == productUpdate.Id);
             int index = this.products.IndexOf(productToModify);
-            if (productToModify == null) return new ProductsResponse();
-            productToModify.Name = productUpdate.Req.Name != null && productUpdate.Req.Name != productToModify.Name ? productUpdate.Req.Name : productToModify.Name;
-            productToModify.Price = productUpdate.Req.Price != 0 && productToModify.Price != productUpdate.Req.Price ? productUpdate.Req.Price : productToModify.Price;
-            productToModify.Stock = productUpdate.Req.Stock != 0 && productToModify.Stock != productUpdate.Req.Stock ? productUpdate.Req.Stock : productToModify.Stock;
+            if (productToModify == null) return null;
+            productToModify.Name = productUpdate.Product.Name != null && productUpdate.Product.Name != productToModify.Name ? productUpdate.Product.Name : productToModify.Name;
+            productToModify.Price = productUpdate.Product.Price != 0 && productToModify.Price != productUpdate.Product.Price ? productUpdate.Product.Price : productToModify.Price;
+            productToModify.Stock = productUpdate.Product.Stock != 0 && productToModify.Stock != productUpdate.Product.Stock ? productUpdate.Product.Stock : productToModify.Stock;
             productToModify.UpdatedAt = DateTime.Now;
             this.products[index] = productToModify;
             return new ProductsResponse()

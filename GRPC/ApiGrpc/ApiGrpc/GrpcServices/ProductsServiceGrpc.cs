@@ -1,5 +1,7 @@
 ﻿using ApiGrpc.Model;
 using ApiGrpc.Services;
+using ApiGrpc.Validators;
+using FluentValidation.Results;
 using Grpc.Core;
 using GrpcProduct;
 
@@ -14,7 +16,7 @@ namespace ApiGrpc.GrpcServices
             _service = service;
         }
 
-        public override async Task<PaginationResponse> GetAll(PaginationArgs args, ServerCallContext serverCallContext)
+        public override async Task<PaginationProducts> GetAll(PaginationArgs args, ServerCallContext serverCallContext)
         {
             await Task.Delay(100);
            return _service.GetAll(args);
@@ -26,9 +28,21 @@ namespace ApiGrpc.GrpcServices
             return _service.GetOne(pk);
         }
 
-        public override async Task<ProductsResponse> Save(ProductRequest productRequest, ServerCallContext serverCallContext)
+        public override async Task<ProductsHandler> Save(ProductRequest productRequest, ServerCallContext serverCallContext)
         {
-            await Task.Delay(100);
+            ProductRequestValidator validator = new();
+            ValidationResult result = await validator.ValidateAsync(productRequest);
+            if (!result.IsValid)
+            {
+                ProductsHandler handler = new()
+                {
+                    Product = null,
+                    IsError = true
+                };
+                List<string> messages = result.Errors.Select(x => x.ErrorMessage).ToList();
+                handler.Errors.AddRange(messages);
+                return handler;
+            }
             Product product = new Product()
             {
                 Name = productRequest.Name,
@@ -36,19 +50,36 @@ namespace ApiGrpc.GrpcServices
                 Stock = productRequest.Stock
             };
             _service.Save(product);
-            return new ProductsResponse()
+            ProductsResponse productResponse = new ProductsResponse()
             {
                 Id = product.Id.ToString(),
-                Name = product.Name,
+                 Name = product.Name,
                 Price = product.Price,
                 Stock = product.Stock
             };
+            return new ProductsHandler()
+            {
+                Product = productResponse,
+                IsError = false
+            } ;
         }
 
-        public override async Task<ProductsResponse> Update(ProductUpdate productUpdate, ServerCallContext serverCallContext)
+        public override async Task<ProductsHandler> Update(ProductUpdate productUpdate, ServerCallContext serverCallContext)
         {
             await Task.Delay(100);
-            return _service.Update(productUpdate);
+            ProductsResponse productResponse = _service.Update(productUpdate);
+            ProductsHandler handler = new();
+            if (productResponse == null)
+            {
+                handler.IsError = true;
+                handler.Errors.Add("El producto seleccionado no existe");
+            }
+            else
+            {
+                handler.IsError = false;
+                handler.Product = productResponse;
+            }  
+            return handler;
         }
 
         public override async Task<GrpcProduct.Void> Delete(ProductPk pk, ServerCallContext serverCallContext)

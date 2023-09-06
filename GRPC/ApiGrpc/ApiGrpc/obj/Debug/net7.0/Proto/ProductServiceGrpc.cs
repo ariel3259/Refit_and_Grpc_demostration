@@ -48,7 +48,7 @@ namespace GrpcProduct {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::GrpcProduct.PaginationArgs> __Marshaller_PaginationArgs = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcProduct.PaginationArgs.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::GrpcProduct.PaginationResponse> __Marshaller_PaginationResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcProduct.PaginationResponse.Parser));
+    static readonly grpc::Marshaller<global::GrpcProduct.PaginationProducts> __Marshaller_PaginationProducts = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcProduct.PaginationProducts.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::GrpcProduct.ProductPk> __Marshaller_ProductPk = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcProduct.ProductPk.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -56,17 +56,19 @@ namespace GrpcProduct {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::GrpcProduct.ProductRequest> __Marshaller_ProductRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcProduct.ProductRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::GrpcProduct.ProductsHandler> __Marshaller_ProductsHandler = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcProduct.ProductsHandler.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::GrpcProduct.ProductUpdate> __Marshaller_ProductUpdate = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcProduct.ProductUpdate.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::GrpcProduct.Void> __Marshaller_Void = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::GrpcProduct.Void.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::GrpcProduct.PaginationArgs, global::GrpcProduct.PaginationResponse> __Method_GetAll = new grpc::Method<global::GrpcProduct.PaginationArgs, global::GrpcProduct.PaginationResponse>(
+    static readonly grpc::Method<global::GrpcProduct.PaginationArgs, global::GrpcProduct.PaginationProducts> __Method_GetAll = new grpc::Method<global::GrpcProduct.PaginationArgs, global::GrpcProduct.PaginationProducts>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetAll",
         __Marshaller_PaginationArgs,
-        __Marshaller_PaginationResponse);
+        __Marshaller_PaginationProducts);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::GrpcProduct.ProductPk, global::GrpcProduct.ProductsResponse> __Method_GetOne = new grpc::Method<global::GrpcProduct.ProductPk, global::GrpcProduct.ProductsResponse>(
@@ -77,20 +79,20 @@ namespace GrpcProduct {
         __Marshaller_ProductsResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::GrpcProduct.ProductRequest, global::GrpcProduct.ProductsResponse> __Method_Save = new grpc::Method<global::GrpcProduct.ProductRequest, global::GrpcProduct.ProductsResponse>(
+    static readonly grpc::Method<global::GrpcProduct.ProductRequest, global::GrpcProduct.ProductsHandler> __Method_Save = new grpc::Method<global::GrpcProduct.ProductRequest, global::GrpcProduct.ProductsHandler>(
         grpc::MethodType.Unary,
         __ServiceName,
         "Save",
         __Marshaller_ProductRequest,
-        __Marshaller_ProductsResponse);
+        __Marshaller_ProductsHandler);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::GrpcProduct.ProductUpdate, global::GrpcProduct.ProductsResponse> __Method_Update = new grpc::Method<global::GrpcProduct.ProductUpdate, global::GrpcProduct.ProductsResponse>(
+    static readonly grpc::Method<global::GrpcProduct.ProductUpdate, global::GrpcProduct.ProductsHandler> __Method_Update = new grpc::Method<global::GrpcProduct.ProductUpdate, global::GrpcProduct.ProductsHandler>(
         grpc::MethodType.Unary,
         __ServiceName,
         "Update",
         __Marshaller_ProductUpdate,
-        __Marshaller_ProductsResponse);
+        __Marshaller_ProductsHandler);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::GrpcProduct.ProductPk, global::GrpcProduct.Void> __Method_Delete = new grpc::Method<global::GrpcProduct.ProductPk, global::GrpcProduct.Void>(
@@ -111,7 +113,7 @@ namespace GrpcProduct {
     public abstract partial class ProductServiceBase
     {
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::GrpcProduct.PaginationResponse> GetAll(global::GrpcProduct.PaginationArgs request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::GrpcProduct.PaginationProducts> GetAll(global::GrpcProduct.PaginationArgs request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -123,13 +125,13 @@ namespace GrpcProduct {
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::GrpcProduct.ProductsResponse> Save(global::GrpcProduct.ProductRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::GrpcProduct.ProductsHandler> Save(global::GrpcProduct.ProductRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::GrpcProduct.ProductsResponse> Update(global::GrpcProduct.ProductUpdate request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::GrpcProduct.ProductsHandler> Update(global::GrpcProduct.ProductUpdate request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -170,22 +172,22 @@ namespace GrpcProduct {
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::GrpcProduct.PaginationResponse GetAll(global::GrpcProduct.PaginationArgs request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::GrpcProduct.PaginationProducts GetAll(global::GrpcProduct.PaginationArgs request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetAll(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::GrpcProduct.PaginationResponse GetAll(global::GrpcProduct.PaginationArgs request, grpc::CallOptions options)
+      public virtual global::GrpcProduct.PaginationProducts GetAll(global::GrpcProduct.PaginationArgs request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetAll, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::GrpcProduct.PaginationResponse> GetAllAsync(global::GrpcProduct.PaginationArgs request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::GrpcProduct.PaginationProducts> GetAllAsync(global::GrpcProduct.PaginationArgs request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetAllAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::GrpcProduct.PaginationResponse> GetAllAsync(global::GrpcProduct.PaginationArgs request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::GrpcProduct.PaginationProducts> GetAllAsync(global::GrpcProduct.PaginationArgs request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetAll, null, options, request);
       }
@@ -210,42 +212,42 @@ namespace GrpcProduct {
         return CallInvoker.AsyncUnaryCall(__Method_GetOne, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::GrpcProduct.ProductsResponse Save(global::GrpcProduct.ProductRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::GrpcProduct.ProductsHandler Save(global::GrpcProduct.ProductRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return Save(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::GrpcProduct.ProductsResponse Save(global::GrpcProduct.ProductRequest request, grpc::CallOptions options)
+      public virtual global::GrpcProduct.ProductsHandler Save(global::GrpcProduct.ProductRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_Save, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::GrpcProduct.ProductsResponse> SaveAsync(global::GrpcProduct.ProductRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::GrpcProduct.ProductsHandler> SaveAsync(global::GrpcProduct.ProductRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SaveAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::GrpcProduct.ProductsResponse> SaveAsync(global::GrpcProduct.ProductRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::GrpcProduct.ProductsHandler> SaveAsync(global::GrpcProduct.ProductRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_Save, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::GrpcProduct.ProductsResponse Update(global::GrpcProduct.ProductUpdate request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::GrpcProduct.ProductsHandler Update(global::GrpcProduct.ProductUpdate request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return Update(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::GrpcProduct.ProductsResponse Update(global::GrpcProduct.ProductUpdate request, grpc::CallOptions options)
+      public virtual global::GrpcProduct.ProductsHandler Update(global::GrpcProduct.ProductUpdate request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_Update, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::GrpcProduct.ProductsResponse> UpdateAsync(global::GrpcProduct.ProductUpdate request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::GrpcProduct.ProductsHandler> UpdateAsync(global::GrpcProduct.ProductUpdate request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return UpdateAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::GrpcProduct.ProductsResponse> UpdateAsync(global::GrpcProduct.ProductUpdate request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::GrpcProduct.ProductsHandler> UpdateAsync(global::GrpcProduct.ProductUpdate request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_Update, null, options, request);
       }
@@ -297,10 +299,10 @@ namespace GrpcProduct {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, ProductServiceBase serviceImpl)
     {
-      serviceBinder.AddMethod(__Method_GetAll, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::GrpcProduct.PaginationArgs, global::GrpcProduct.PaginationResponse>(serviceImpl.GetAll));
+      serviceBinder.AddMethod(__Method_GetAll, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::GrpcProduct.PaginationArgs, global::GrpcProduct.PaginationProducts>(serviceImpl.GetAll));
       serviceBinder.AddMethod(__Method_GetOne, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::GrpcProduct.ProductPk, global::GrpcProduct.ProductsResponse>(serviceImpl.GetOne));
-      serviceBinder.AddMethod(__Method_Save, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::GrpcProduct.ProductRequest, global::GrpcProduct.ProductsResponse>(serviceImpl.Save));
-      serviceBinder.AddMethod(__Method_Update, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::GrpcProduct.ProductUpdate, global::GrpcProduct.ProductsResponse>(serviceImpl.Update));
+      serviceBinder.AddMethod(__Method_Save, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::GrpcProduct.ProductRequest, global::GrpcProduct.ProductsHandler>(serviceImpl.Save));
+      serviceBinder.AddMethod(__Method_Update, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::GrpcProduct.ProductUpdate, global::GrpcProduct.ProductsHandler>(serviceImpl.Update));
       serviceBinder.AddMethod(__Method_Delete, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::GrpcProduct.ProductPk, global::GrpcProduct.Void>(serviceImpl.Delete));
     }
 

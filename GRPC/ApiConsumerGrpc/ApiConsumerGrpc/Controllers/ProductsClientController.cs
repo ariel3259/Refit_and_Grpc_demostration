@@ -18,7 +18,7 @@ namespace ApiConsumerGrpc.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAll([FromQuery(Name = "offset")] int? offset,[FromQuery(Name = "limit")] int? limit)
         {
-            PaginationResponse response = await _client.GetAllAsync(new PaginationArgs
+            PaginationProducts response = await _client.GetAllAsync(new PaginationArgs
             {
                 Limit = limit ?? 10,
                 Offset = offset ?? 0,
@@ -41,19 +41,29 @@ namespace ApiConsumerGrpc.Controllers
         [HttpPost]
         public async Task<IActionResult> Save([FromBody] ProductRequest request)
         {
-            ProductsResponse response = await _client.SaveAsync(request);
-            return Created("/client/products", response);
+            ProductsHandler response = await _client.SaveAsync(request);
+            if (response.IsError)
+            {
+                string message = "";
+                Console.WriteLine(response.Errors.Count);
+                foreach (string error in response.Errors)
+                {
+                    message += $"{error}.";
+                }
+                return Problem(detail: message, statusCode: 400);
+            }
+            return Created("/client/products", response.Product);
         }
 
         [HttpPut("{id}")]
         public async Task<IActionResult> Update([FromBody] ProductRequest product, [FromRoute(Name = "id")] string id)
         {
-            ProductsResponse res = await _client.UpdateAsync(new ProductUpdate()
+            ProductsHandler res = await _client.UpdateAsync(new ProductUpdate()
             {
-                Req = product,
+                Product = product,
                 Id = id
             });
-            if (res.Name == "") return NoContent();
+            if (res.IsError) return Problem(detail: res.Errors[0], statusCode: 400);
             return Ok(res);
         }
 
