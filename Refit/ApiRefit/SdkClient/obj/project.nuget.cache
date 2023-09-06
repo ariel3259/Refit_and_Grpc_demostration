@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "eJOoGzLTwndeJDCcF/hzxDyVS4KGTNSHgr9Wk813MJLHAVe5oQQAXdn5QwaqCplXL41ac2LWFpvatMOOrDv6lg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Ryzen3\\Desktop\\APIS\\Refit\\ApiRefit\\SdkClient\\SdkClient.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Ryzen3\\.nuget\\packages\\refit\\7.0.0\\refit.7.0.0.nupkg.sha512",
+    "C:\\Users\\Ryzen3\\.nuget\\packages\\system.net.http.json\\7.0.1\\system.net.http.json.7.0.1.nupkg.sha512",
+    "C:\\Users\\Ryzen3\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
+    "C:\\Users\\Ryzen3\\.nuget\\packages\\system.text.json\\7.0.3\\system.text.json.7.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

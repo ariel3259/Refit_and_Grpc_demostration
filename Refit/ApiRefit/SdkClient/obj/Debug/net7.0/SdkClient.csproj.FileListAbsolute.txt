@@ -1,0 +1,12 @@
+C:\Users\Ryzen3\Desktop\APIS\Refit\ApiRefit\SdkClient\bin\Debug\net7.0\SdkClient.deps.json
+C:\Users\Ryzen3\Desktop\APIS\Refit\ApiRefit\SdkClient\bin\Debug\net7.0\SdkClient.dll
+C:\Users\Ryzen3\Desktop\APIS\Refit\ApiRefit\SdkClient\bin\Debug\net7.0\SdkClient.pdb
+C:\Users\Ryzen3\Desktop\APIS\Refit\ApiRefit\SdkClient\obj\Debug\net7.0\SdkClient.csproj.AssemblyReference.cache
+C:\Users\Ryzen3\Desktop\APIS\Refit\ApiRefit\SdkClient\obj\Debug\net7.0\SdkClient.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ryzen3\Desktop\APIS\Refit\ApiRefit\SdkClient\obj\Debug\net7.0\SdkClient.AssemblyInfoInputs.cache
+C:\Users\Ryzen3\Desktop\APIS\Refit\ApiRefit\SdkClient\obj\Debug\net7.0\SdkClient.AssemblyInfo.cs
+C:\Users\Ryzen3\Desktop\APIS\Refit\ApiRefit\SdkClient\obj\Debug\net7.0\SdkClient.csproj.CoreCompileInputs.cache
+C:\Users\Ryzen3\Desktop\APIS\Refit\ApiRefit\SdkClient\obj\Debug\net7.0\SdkClient.dll
+C:\Users\Ryzen3\Desktop\APIS\Refit\ApiRefit\SdkClient\obj\Debug\net7.0\refint\SdkClient.dll
+C:\Users\Ryzen3\Desktop\APIS\Refit\ApiRefit\SdkClient\obj\Debug\net7.0\SdkClient.pdb
+C:\Users\Ryzen3\Desktop\APIS\Refit\ApiRefit\SdkClient\obj\Debug\net7.0\ref\SdkClient.dll

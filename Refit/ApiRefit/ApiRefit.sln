@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiRefit", "ApiRefit\ApiRefit.csproj", "{94A50F23-835C-4004-99CB-94AFF6FC3E7E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SdkClient", "SdkClient\SdkClient.csproj", "{C2E6FDFD-E432-49AE-BFF3-8DB9E8AE1DCA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{94A50F23-835C-4004-99CB-94AFF6FC3E7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94A50F23-835C-4004-99CB-94AFF6FC3E7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94A50F23-835C-4004-99CB-94AFF6FC3E7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94A50F23-835C-4004-99CB-94AFF6FC3E7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2E6FDFD-E432-49AE-BFF3-8DB9E8AE1DCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2E6FDFD-E432-49AE-BFF3-8DB9E8AE1DCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2E6FDFD-E432-49AE-BFF3-8DB9E8AE1DCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2E6FDFD-E432-49AE-BFF3-8DB9E8AE1DCA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C1E87D0E-2988-431F-A2C0-543966209E10}
+	EndGlobalSection
+EndGlobal

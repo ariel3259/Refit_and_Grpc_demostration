@@ -1,6 +1,7 @@
 ﻿using GrpcProduct;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Cryptography;
+using System.Text;
 
 namespace ApiConsumerGrpc.Controllers
 {
@@ -18,12 +19,22 @@ namespace ApiConsumerGrpc.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAll([FromQuery(Name = "offset")] int? offset,[FromQuery(Name = "limit")] int? limit)
         {
+            int off = offset ?? 0;
+            int lim = limit ?? 10;
             PaginationProducts response = await _client.GetAllAsync(new PaginationArgs
             {
-                Limit = limit ?? 10,
-                Offset = offset ?? 0,
+                Limit = off,
+                Offset = lim,
             });
+            //Adding x total count header
             Response.Headers.Add("x-total-count", response.TotalItems.ToString());
+
+            //Adding link header
+            StringBuilder linkBuilder = new();
+            int next = off + lim;
+            if (off > 0) linkBuilder.Append($"</clien/products?offset={off - lim}&limit={lim}>; rel=\"previous\" ,");
+            if (next < response.TotalItems) linkBuilder.Append($"/client/products?offset={next}&limit={lim}; rel=\"next\"");
+            Response.Headers.Add("Link", linkBuilder.ToString());
             return Ok(response.Products.ToList());
         }
 
