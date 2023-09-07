@@ -1,6 +1,7 @@
 ﻿using ApiRefit.Services;
 using ApiRefit.Validators;
 using FluentValidation.Results;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SdkClient.Dto;
 using System.Text;
@@ -8,6 +9,7 @@ using System.Text;
 namespace ApiRefit.Controllers
 {
     [ApiController]
+    [Authorize()]
     [Route("/api/products")]
     public class ProductsController: ControllerBase
     {

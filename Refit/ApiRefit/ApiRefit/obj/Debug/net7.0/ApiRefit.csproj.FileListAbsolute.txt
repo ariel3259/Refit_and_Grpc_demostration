@@ -37,3 +37,10 @@ C:\Users\Ryzen3\Desktop\APIS\Refit\ApiRefit\ApiRefit\bin\Debug\net7.0\System.Tex
 C:\Users\Ryzen3\Desktop\APIS\Refit\ApiRefit\ApiRefit\bin\Debug\net7.0\SdkClient.dll
 C:\Users\Ryzen3\Desktop\APIS\Refit\ApiRefit\ApiRefit\bin\Debug\net7.0\SdkClient.pdb
 C:\Users\Ryzen3\Desktop\APIS\Refit\ApiRefit\ApiRefit\bin\Debug\net7.0\FluentValidation.dll
+C:\Users\Ryzen3\Desktop\APIS\Refit\ApiRefit\ApiRefit\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Ryzen3\Desktop\APIS\Refit\ApiRefit\ApiRefit\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Ryzen3\Desktop\APIS\Refit\ApiRefit\ApiRefit\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Ryzen3\Desktop\APIS\Refit\ApiRefit\ApiRefit\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Ryzen3\Desktop\APIS\Refit\ApiRefit\ApiRefit\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Ryzen3\Desktop\APIS\Refit\ApiRefit\ApiRefit\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Ryzen3\Desktop\APIS\Refit\ApiRefit\ApiRefit\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
